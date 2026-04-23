@@ -1,33 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed, rotationSpeed;
-    private float xInput, yInput;
-    private Rigidbody rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // !! THIS CODE IS NOT MINE !! Using for practice only
+    public Camera playerCamera;
+    public float walkSpeed = 2f;
+    public float runSpeed = 3f;
+    public float jumpPower = 2f;
+    public float gravity = 3f;
+    public float defaultHeight = 1f;
+
+    private Vector3 moveDirection = Vector3.zero;
+    private float rotationX = 0;
+    private CharacterController characterController;
+
+    private bool canMove = true;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        characterController = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxisRaw("Vertical");
+        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 right = transform.TransformDirection(Vector3.right);
 
-        transform.Rotate(Vector3.up, xInput * rotationSpeed * Time.deltaTime); // Rotates player
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
+        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+        float movementDirectionY = moveDirection.y;
+        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-        if (yInput == 0)
+        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            rb.linearVelocity = Vector3.zero; // Stops player when no input
+            moveDirection.y = jumpPower;
         }
-    }
+        else
+        {
+            moveDirection.y = movementDirectionY;
+        }
 
-    private void FixedUpdate()
-    {
-        rb.AddForce(yInput * speed * transform.forward); // Moves player forward/backward
+        if (!characterController.isGrounded)
+        {
+            moveDirection.y -= gravity * Time.deltaTime;
+        }
+        else
+        {
+            characterController.height = defaultHeight;
+            walkSpeed = 2f;
+            runSpeed = 3f;
+        }
+
+        characterController.Move(moveDirection * Time.deltaTime);
     }
 }
