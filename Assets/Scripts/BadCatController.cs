@@ -3,16 +3,16 @@ using UnityEngine;
 public class BadCatController : MonoBehaviour
 {
     // Controls forward and backward movement
-    public float forwardInput;
+    private float forwardInput;
 
     // Controls left and right movement
-    public float horizontalInput;
+    private float horizontalInput;
 
     // Controls player speed
-    public float moveSpeed = 2.0f;
+    private float moveSpeed = 2.0f;
 
     // Controls player jump force
-    public float jumpForce = 1.0f;
+    private float jumpForce = 1.0f;
 
     // References Rigidbody
     private Rigidbody rb;
@@ -21,8 +21,7 @@ public class BadCatController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        bool itemCarry = true;
-        bool itemHave = true;
+        
         
     }
 
@@ -42,14 +41,8 @@ public class BadCatController : MonoBehaviour
         // Allows player to jump
         if (Input.GetKeyDown (KeyCode.Space))
         {
-            transform.position += new Vector3(0, jumpForce / 5, 0);
+            transform.position += new Vector3(0, jumpForce / 4, 0);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
-
-        // Allows player to pick up an object
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-
         }
     }
 }
