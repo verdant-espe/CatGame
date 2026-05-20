@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 38738659}
   - component: {fileID: 38738658}
   - component: {fileID: 38738657}
+  - component: {fileID: 38738660}
   m_Layer: 0
   m_Name: BadCat
   m_TagString: Player
@@ -311,6 +312,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2b13fade616a447ade489fa7073183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BadCatController
+--- !u!95 &38738660
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38738654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a1c11dd1803f8e4a9826dc535c8b6b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!43 &39845454
 Mesh:
   m_ObjectHideFlags: 0
@@ -4720,6 +4743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwimInWater
   Player: {fileID: 38738654}
+  Water: {fileID: 1804542865}
   waterGrav: 3
 --- !u!1 &1882501963
 GameObject:
