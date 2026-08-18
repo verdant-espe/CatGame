@@ -1644,6 +1644,8 @@ GameObject:
   - component: {fileID: 610647879}
   - component: {fileID: 610647878}
   - component: {fileID: 610647877}
+  - component: {fileID: 610647881}
+  - component: {fileID: 610647882}
   m_Layer: 0
   m_Name: BadCat
   m_TagString: Untagged
@@ -1786,6 +1788,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &610647881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610647875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930ac80204b35f848b1d1870f29fdc4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeAnim
+--- !u!95 &610647882
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610647875}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a1c11dd1803f8e4a9826dc535c8b6b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!43 &616770622
 Mesh:
   m_ObjectHideFlags: 0
@@ -2557,6 +2593,7 @@ GameObject:
   - component: {fileID: 1159381959}
   - component: {fileID: 1159381958}
   - component: {fileID: 1159381957}
+  - component: {fileID: 1159381960}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2649,6 +2686,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1159381960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159381955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1653fa11df288149b1c06de7f3f0314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadCustomScene
 --- !u!1 &1260318706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,6 +4271,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1159381960}
+        m_TargetAssemblyTypeName: LoadCustomScene, Assembly-CSharp
+        m_MethodName: LoadTerrain
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
