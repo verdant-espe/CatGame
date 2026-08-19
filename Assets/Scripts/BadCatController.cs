@@ -12,7 +12,7 @@ public class BadCatController : MonoBehaviour
     private float moveSpeed = 2.0f;
 
     // Controls player jump force
-    private float jumpForce = 1.0f;
+    private float jumpForce = 1.5f;
 
     // References Rigidbody
     private Rigidbody rb;
