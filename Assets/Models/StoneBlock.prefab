@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 688956239880824252}
   - component: {fileID: 768957625777653402}
   - component: {fileID: 2059791850363895478}
+  - component: {fileID: 6103941150509964627}
   m_Layer: 0
   m_Name: StoneBlock
   m_TagString: Interactable
@@ -406,3 +407,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3, y: 0.31141955, z: 0.3}
   m_Center: {x: 0, y: 0.022412896, z: 0}
+--- !u!114 &6103941150509964627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776706195774156997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
