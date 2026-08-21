@@ -38,6 +38,7 @@ public class ChangeAnim : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             catAnimator.SetBool("DoWalk", true);
+            
         }
         // Changes back to idle sprite
         if (Input.GetKeyUp(KeyCode.S))
