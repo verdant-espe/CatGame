@@ -84,6 +84,7 @@ public class BadCatController : MonoBehaviour
         transform.localScale = scale;
     }
 
+    // Player is touching ground
     void OnCollisionStay()
     {
         isGrounded = true;

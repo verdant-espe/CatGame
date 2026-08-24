@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BadCatCarryDrop : MonoBehaviour
 {
-    // Serializes a field for the player camera
-    [SerializeField] private Transform badcatCameraTransform;
+    // Serializes a field for the player
+    [SerializeField] private Transform badcatCharTransform;
     // Serializes a field for the layer mask
     [SerializeField] private LayerMask pickupLayerMask;
     [SerializeField] private Transform interactableGrabPointTransform;
@@ -20,9 +20,10 @@ public class BadCatCarryDrop : MonoBehaviour
             if (detectInteractable == null)
             {
                 // Sets the distance an interactable can be picked up and carried
-                float carryDistance = 2f;
+                float carryDistance = 0.5f;
+                float otherCarryDistance = -0.5f;
                 // Creates the physics for the player to carry an interactable
-                if (Physics.Raycast(badcatCameraTransform.position, badcatCameraTransform.forward, out RaycastHit raycastHit, carryDistance, pickupLayerMask))
+                if (Physics.Raycast(badcatCharTransform.position, badcatCharTransform.right, out RaycastHit raycastHit, carryDistance, pickupLayerMask))
                 {
                     // If raycast detects that a collision happens, show in debug console
                     Debug.Log(raycastHit, transform);
