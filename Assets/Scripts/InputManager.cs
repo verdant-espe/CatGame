@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
@@ -12,6 +14,22 @@ public class InputManager : MonoBehaviour
     // Detects mouse position on ground
     [SerializeField]
     private LayerMask placementLayerMask;
+
+    // Tells when user has clicked the mouse button
+    public event Action OnClicked, OnExit;
+
+    private void Update()
+    {
+        // Calls action event, tells that mouse is clicked, interactable is placed
+        if (Input.GetMouseButtonDown(0))
+            OnClicked?.Invoke();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            OnExit?.Invoke();
+    }
+
+    public bool IsPointerOverUI()
+        // Returns true or false if pointer is over a UI object
+        => EventSystem.current.IsPointerOverGameObject();
 
     public Vector3 selectGroundPos()
     {
