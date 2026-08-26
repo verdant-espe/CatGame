@@ -21,7 +21,6 @@ public class BadCatCarryDrop : MonoBehaviour
             {
                 // Sets the distance an interactable can be picked up and carried
                 float carryDistance = 0.5f;
-                float otherCarryDistance = -0.5f;
                 // Creates the physics for the player to carry an interactable
                 if (Physics.Raycast(badcatCharTransform.position, badcatCharTransform.right, out RaycastHit raycastHit, carryDistance, pickupLayerMask))
                 {

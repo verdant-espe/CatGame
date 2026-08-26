@@ -63,10 +63,11 @@ public class PlacementSystem : MonoBehaviour
         // Converts mouse position to the grid
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
-
+        // Gets interactable prefab by swapping index
+        GameObject newInteractable = Instantiate(database.interactableData[selectedInteractableIndex].Prefab);
 
         // Converts grid position back to world position
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        newInteractable.transform.position = grid.CellToWorld(gridPosition);
     }
 
     private void StopPlacement()
@@ -89,6 +90,10 @@ public class PlacementSystem : MonoBehaviour
 
     private void Update()
     {
+        // If selectedInteractableIndex is greater than 0, return
+        if (selectedInteractableIndex < 0)
+            return;
+
         // Gets the selected position of ground
         Vector3 mousePosition = inputManager.selectGroundPos();
 

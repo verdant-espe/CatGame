@@ -2015,8 +2015,8 @@ MonoBehaviour:
     Space to jump
 
 
-    Other buttons to
-    do other things'
+    Left mouse click
+    to hold/drop blocks'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 853b69bbea0e9cb4d80a22acac3422d3, type: 2}
   m_sharedMaterial: {fileID: -2928707065213000127, guid: 853b69bbea0e9cb4d80a22acac3422d3, type: 2}
@@ -6913,8 +6913,8 @@ Transform:
   m_GameObject: {fileID: 1475013104}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.208002, y: -14.59, z: -145.07701}
-  m_LocalScale: {x: 2.410735, y: 2.410735, z: 2.410735}
+  m_LocalPosition: {x: -1.28, y: -14.88, z: -145.07701}
+  m_LocalScale: {x: 3.0924907, y: 3.0924907, z: 3.0924907}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1744791057}
