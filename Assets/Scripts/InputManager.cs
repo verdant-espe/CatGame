@@ -23,6 +23,7 @@ public class InputManager : MonoBehaviour
         // Calls action event, tells that mouse is clicked, interactable is placed
         if (Input.GetMouseButtonDown(0))
             OnClicked?.Invoke();
+        // Gets out of placement mode
         if (Input.GetKeyDown(KeyCode.Escape))
             OnExit?.Invoke();
     }
