@@ -1,14 +1,21 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class ChangeAnim : MonoBehaviour
 {
     // Creates a private Animator class
     private Animator catAnimator;
+
+    // References player rigidbody
+    Rigidbody rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
     // Controls the sprite's animations
         catAnimator = GetComponent<Animator>();
+    // Sets rigidbody for player 
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -68,5 +75,10 @@ public class ChangeAnim : MonoBehaviour
         {
             catAnimator.SetBool("DoJump", false);
         }
+    }
+    // Changes to fall sprite
+    private void FixedUpdate()
+    {
+        catAnimator.SetFloat("DoFall", rb.linearVelocity.y);
     }
 }
