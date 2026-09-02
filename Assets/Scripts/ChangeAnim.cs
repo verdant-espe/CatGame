@@ -81,4 +81,13 @@ public class ChangeAnim : MonoBehaviour
     {
         catAnimator.SetFloat("DoFall", rb.linearVelocity.y);
     }
+
+    // Changes to hurt sprite when player touches harmful item
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Harm")
+        {
+            catAnimator.SetBool("DoHurt", true);
+        }
+    }
 }

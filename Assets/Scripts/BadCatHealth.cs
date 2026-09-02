@@ -1,7 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BatCatHealth : MonoBehaviour
+public class BadCatHealth : MonoBehaviour
 {
     // Creates a public int for health
     public int health;
@@ -9,9 +10,9 @@ public class BatCatHealth : MonoBehaviour
     // Creates a public int for the number of hearts
     public int maxHearts;
 
-
     // Accesses heart sprites on UI
     public Image[] hearts;
+
 
     // Creates a public int for the full heart sprite
     public Sprite fullHeart;
@@ -54,6 +55,19 @@ public class BatCatHealth : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+
+    }
+
+    // Keeps track of damage player takes
+    public void TakeDamage(int damgAmount)
+    {
+        // If health is less than 0, player dies
+        health -=damgAmount;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
