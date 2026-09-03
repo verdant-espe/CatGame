@@ -29,3 +29,7 @@ MonoBehaviour:
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 557769677845601722, guid: e635a6ab4e651814089f965aa96c336f, type: 3}
+  - <Name>k__BackingField: Wood Block
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 1701470807018619185, guid: 4845ac9d0d5399c4ebd90f63e929a297, type: 3}

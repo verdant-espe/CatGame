@@ -114,6 +114,7 @@ public class PlacementSystem : MonoBehaviour
         return selectedData.CanPlaceItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size);
     }
 
+    // Stops items from being placed in another item's place
     private void StopPlacement()
     {
         // Resets when index equals -1
