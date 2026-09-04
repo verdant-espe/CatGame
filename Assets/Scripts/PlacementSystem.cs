@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class PlacementSystem : MonoBehaviour
 {
     // Used to detect which position on the ground you're selecting using the mouse pointer
-    [SerializeField] GameObject mouseIndicator, cellIndicator;
+    [SerializeField] GameObject mouseIndicator;
 
     // Creates a private property for InputManager
     [SerializeField] private InputManager inputManager;
@@ -26,11 +26,14 @@ public class PlacementSystem : MonoBehaviour
     // Creates data for terrain ground and blocks
     private GridData groundData, blockData;
 
-    // Creates a preview of the item
-    private Renderer previewRenderer;
-
     // Creates a list for GameObjects
     private List<GameObject> placedGameObject = new();
+
+    // References PreviewSystem
+    [SerializeField] private PreviewSystem preview;
+
+    // Creates placement preview
+    private Vector3Int lastDetectedPosition = Vector3Int.zero;
 
     private void Start()
     {
@@ -40,9 +43,6 @@ public class PlacementSystem : MonoBehaviour
 
         // Defines blockData
         blockData = new();
-
-        // Accesses preview of item
-        previewRenderer = cellIndicator.GetComponentInChildren<Renderer>();
     }
 
     public void StartPlacement(int ID)
@@ -59,8 +59,8 @@ public class PlacementSystem : MonoBehaviour
         // Called when interactable has ID, can be placed
         gridVisual.SetActive(true);
 
-        // Shows where interactable will be placed
-        cellIndicator.SetActive(true);
+        // Accesses prefab and size of preview item
+        preview.ShowPlacementPreview(database.interactableData[selectedInteractableIndex].Prefab, database.interactableData[selectedInteractableIndex].Size);
 
         // Places down interactable
         inputManager.OnClicked += PlaceStructure;
@@ -103,6 +103,9 @@ public class PlacementSystem : MonoBehaviour
 
         // Accesses item from list
         selectedData.AddItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size, database.interactableData[selectedInteractableIndex].ID, placedGameObject.Count - 1);
+
+        // If an item is already in the selected position, cannot place item
+        preview.UpdatePosition(grid.CellToWorld(gridPosition), false);
     }
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedInteractableIndex)
@@ -123,14 +126,17 @@ public class PlacementSystem : MonoBehaviour
         // Hides grid visual
         gridVisual.SetActive(false);
 
-        // Hides indicator
-        cellIndicator.SetActive(false);
+        // Removes preview from grid
+        preview.StopPreview();
 
         // Unassigns PlaceStructure to OnClicked
         inputManager.OnClicked -= PlaceStructure;
 
         // Unassigns StopPlacement to OnExit
         inputManager.OnExit -= StopPlacement;
+
+        // Assigns preview position to zero
+        lastDetectedPosition = Vector3Int.zero;
     }
 
     private void Update()
@@ -145,16 +151,19 @@ public class PlacementSystem : MonoBehaviour
         // Converts mouse position to the grid
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
-        // Checks validity of placement
-        bool placementValidity = CheckPlacementValidity(gridPosition, selectedInteractableIndex);
+        // if lastDetectedPosition is not equal to gridPosition, select cell
+        if (lastDetectedPosition != gridPosition)
+        {
+            // Checks validity of placement
+            bool placementValidity = CheckPlacementValidity(gridPosition, selectedInteractableIndex);
 
-        // If placementValidity is false, make indicator red
-        previewRenderer.material.color = placementValidity ? Color.lightGreen : Color.red;
+            // Updates preview position to the grid
+            preview.UpdatePosition(grid.CellToWorld(gridPosition), placementValidity);
 
-        // Transforms the position of mouseIndicator
-        mouseIndicator.transform.position = mousePosition;
+            // Transforms the position of mouseIndicator
+            mouseIndicator.transform.position = mousePosition;
 
-        // Converts grid position back to world position
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+            lastDetectedPosition = gridPosition;
+        }
     }
 }
