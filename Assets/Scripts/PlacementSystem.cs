@@ -53,6 +53,12 @@ public class PlacementSystem : MonoBehaviour
 
     public void StartPlacement(int ID)
     {
+        // Calls StopPlacement
+        StopPlacement();
+
+        // Called when interactable has ID, can be placed
+        gridVisual.SetActive(true);
+
         // Returns index of an interactable
         selectedInteractableIndex = database.interactableData.FindIndex(data => data.ID == ID);
         
@@ -62,8 +68,6 @@ public class PlacementSystem : MonoBehaviour
             Debug.LogError($"No ID found {ID}");
             return;
         }
-        // Called when interactable has ID, can be placed
-        gridVisual.SetActive(true);
 
         // Shows where interactable will be placed
         cellIndicator.SetActive(true);
@@ -95,20 +99,14 @@ public class PlacementSystem : MonoBehaviour
         if (placementValidity == false)
             return;
 
-        // Gets interactable prefab by swapping index
-        GameObject newInteractable = Instantiate(database.interactableData[selectedInteractableIndex].Prefab);
-
-        // Converts grid position back to world position
-        newInteractable.transform.position = grid.CellToWorld(gridPosition);
-
-        // Adds new items to index
-        placedGameObject.Add(newInteractable);
+        // sets index equal to PlaceItem
+        int index = interactablePlacer.PlaceItem(database.interactableData[selectedInteractableIndex].Prefab, grid.CellToWorld(gridPosition));
 
         // If selectedData and interactableData equals 0, return ground and block data
         GridData selectedData = database.interactableData[selectedInteractableIndex].ID == 0 ? groundData : blockData;
 
         // Accesses item from list
-        selectedData.AddItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size, database.interactableData[selectedInteractableIndex].ID, placedGameObject.Count - 1);
+        selectedData.AddItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size, database.interactableData[selectedInteractableIndex].ID, index);
     }
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedInteractableIndex)
@@ -151,16 +149,27 @@ public class PlacementSystem : MonoBehaviour
         // Converts mouse position to the grid
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
-        // Checks validity of placement
-        bool placementValidity = CheckPlacementValidity(gridPosition, selectedInteractableIndex);
+        if (lastDetectedPosition != gridPosition)
+        {
+            // Checks validity of placement
+            bool placementValidity = CheckPlacementValidity(gridPosition, selectedInteractableIndex);
 
-        // If placementValidity is false, make indicator red
-        previewRenderer.material.color = placementValidity ? Color.lightGreen : Color.red;
+            // If placementValidity is false, make indicator red
+            previewRenderer.material.color = placementValidity ? Color.lightGreen : Color.red;
 
-        // Transforms the position of mouseIndicator
-        mouseIndicator.transform.position = mousePosition;
+            // Transforms the position of mouseIndicator
+            mouseIndicator.transform.position = mousePosition;
 
-        // Converts grid position back to world position
-        cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+            // Converts grid position back to world position
+            cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        }
     }
+
+    //internal void ShowRemovePreview()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Tab))
+    //    {
+    //        previewRenderer.material.color = Color.red;
+    //    }
+    //}
 }
