@@ -22,4 +22,14 @@ public class InteractablePlacer : MonoBehaviour
         // Returns placedGameObject
         return placedGameObject.Count - 1;
     }
+
+    internal void RemoveItemAt(int gameObjectIndex)
+    {
+        // If placedGameObject is less than gameObjectIndex and equal to null, return
+        if (placedGameObject.Count <= gameObjectIndex || placedGameObject[gameObjectIndex] == null)
+            return;
+        // Else, destroy item
+        Destroy(placedGameObject[gameObjectIndex]);
+        placedGameObject[gameObjectIndex] = null;
+    }
 }

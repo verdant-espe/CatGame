@@ -62,6 +62,24 @@ public class GridData
         return true;
     }
 
+    internal int GetRepresentationIndex(Vector3Int gridPosition)
+    {
+        // If item is not contained in dictionary, return -1
+        if (placedItems.ContainsKey(gridPosition) == false)
+            return -1;
+        // Else, return PlacedItemIndex
+        return placedItems[gridPosition].PlacedItemIndex;
+    }
+
+    internal void RemoveItemAt(Vector3Int gridPosition)
+    {
+        // Gets item's position on the grid and removes it
+        foreach (var pos in placedItems[gridPosition].takenPositions)
+        {
+            placedItems.Remove(pos);
+        }
+    }
+
     // Defines PlacementData
     public class PlacementData
     {

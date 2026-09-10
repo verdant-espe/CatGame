@@ -38,6 +38,9 @@ public class PlacementSystem : MonoBehaviour
     // References InteractablePlacer
     [SerializeField] private InteractablePlacer interactablePlacer;
 
+    // references IBuildingState interface;
+    IBuildingState buildingState;
+
     private void Start()
     {
         StopPlacement();
@@ -72,6 +75,21 @@ public class PlacementSystem : MonoBehaviour
         // Shows where interactable will be placed
         cellIndicator.SetActive(true);
 
+        // Places down interactable
+        inputManager.OnClicked += PlaceStructure;
+
+        // Stops placement after left mouse button is clicked
+        inputManager.OnExit += StopPlacement;
+    }
+
+    public void StartRemoving()
+    {
+        // Calls StopPlacement
+        StopPlacement();
+        // Activates gridVisual
+        gridVisual.SetActive(true);
+        // Calls RemovingState
+        //buildingState = new RemovingState(grid, groundData, blockData, interactablePlacer, placementSystem);
         // Places down interactable
         inputManager.OnClicked += PlaceStructure;
 
@@ -165,11 +183,41 @@ public class PlacementSystem : MonoBehaviour
         }
     }
 
-    //internal void ShowRemovePreview()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Tab))
-    //    {
-    //        previewRenderer.material.color = Color.red;
-    //    }
-    //}
+    private void PrepareCursor(Vector2Int size)
+    {
+        if(size.x > 0 || size.y > 0)
+        {
+            cellIndicator.transform.localScale = new Vector3(size.x, 1, size.y);
+            previewRenderer.material.mainTextureScale = size;
+        }
+    }
+
+    private void ApplyFeedbackToPreview(bool validity)
+    {
+        Color c = validity ? Color.gray : Color.red;
+        c.a = 0.5f;
+        previewRenderer.material.color = c;
+    }
+
+    private void ApplyFeedbackToCursor(bool validity)
+    {
+        Color c = validity ? Color.gray : Color.red;
+    }
+
+    public void UpdatePosition(Vector3 position, bool validity)
+    {
+            ApplyFeedbackToPreview(validity);
+            ApplyFeedbackToCursor(validity);
+    }
+
+    internal void ShowRemovePreview()
+    {
+        PrepareCursor(Vector2Int.one);
+        ApplyFeedbackToCursor(false);
+    }
+
+    public void StopShowingPreview()
+    {
+        cellIndicator.SetActive(false);
+    }
 }
