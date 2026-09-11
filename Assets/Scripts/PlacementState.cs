@@ -12,6 +12,7 @@ public class PlacementState : IBuildingState
     InteractablePlacer interactablePlacer;
     GameObject cellIndicator;
     Renderer previewRenderer;
+    PreviewSystem preview;
 
     // Called when StartPlacement is active
     public PlacementState(int iD,
@@ -19,14 +20,15 @@ public class PlacementState : IBuildingState
                           InteractablesDatabase database,
                           GridData groundData,
                           GridData blockData,
-                          InteractablePlacer interactablePlacer)
+                          InteractablePlacer interactablePlacer, 
+                          PreviewSystem preview)
     {
         ID = iD;
         this.grid = grid;
         this.database = database;
         this.groundData = groundData;
         this.blockData = blockData;
-        this.interactablePlacer = interactablePlacer;
+        this.preview = preview;
 
         // If selectedInteractableIndex is greater than -1, index has found item ID
         if (selectedInteractableIndex > -1)
@@ -69,6 +71,9 @@ public class PlacementState : IBuildingState
 
         // If selectedData and interactableData equals 0, return ground and block data
         GridData selectedData = database.interactableData[selectedInteractableIndex].ID == 0 ? groundData : blockData;
+
+        // Updates position of grid
+        preview.UpdatePosition(grid.CellToWorld(gridPosition), false);
 
         // Accesses item from list
         selectedData.AddItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size, database.interactableData[selectedInteractableIndex].ID, index);

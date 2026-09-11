@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class PlacementSystem : MonoBehaviour
 {
     // Used to detect which position on the ground you're selecting using the mouse pointer
-    [SerializeField] GameObject mouseIndicator, cellIndicator;
+    [SerializeField] GameObject cellIndicator;
 
     // Creates a private property for InputManager
     [SerializeField] private InputManager inputManager;
@@ -16,6 +16,9 @@ public class PlacementSystem : MonoBehaviour
 
     // References database
     [SerializeField] private InteractablesDatabase database;
+
+    // References PreviewSystem
+    [SerializeField] private PreviewSystem preview;
 
     // References item selected from index
     private int selectedInteractableIndex = -1;
@@ -38,7 +41,6 @@ public class PlacementSystem : MonoBehaviour
     // References InteractablePlacer
     [SerializeField] private InteractablePlacer interactablePlacer;
 
-    // references IBuildingState interface;
     IBuildingState buildingState;
 
     private void Start()
@@ -72,6 +74,8 @@ public class PlacementSystem : MonoBehaviour
             return;
         }
 
+        
+
         // Shows where interactable will be placed
         cellIndicator.SetActive(true);
 
@@ -89,7 +93,7 @@ public class PlacementSystem : MonoBehaviour
         // Activates gridVisual
         gridVisual.SetActive(true);
         // Calls RemovingState
-        //buildingState = new RemovingState(grid, groundData, blockData, interactablePlacer, placementSystem);
+        buildingState = new RemovingState(grid, groundData, blockData, interactablePlacer, preview);
         // Places down interactable
         inputManager.OnClicked += PlaceStructure;
 
@@ -175,49 +179,8 @@ public class PlacementSystem : MonoBehaviour
             // If placementValidity is false, make indicator red
             previewRenderer.material.color = placementValidity ? Color.lightGreen : Color.red;
 
-            // Transforms the position of mouseIndicator
-            mouseIndicator.transform.position = mousePosition;
-
             // Converts grid position back to world position
             cellIndicator.transform.position = grid.CellToWorld(gridPosition);
         }
-    }
-
-    private void PrepareCursor(Vector2Int size)
-    {
-        if(size.x > 0 || size.y > 0)
-        {
-            cellIndicator.transform.localScale = new Vector3(size.x, 1, size.y);
-            previewRenderer.material.mainTextureScale = size;
-        }
-    }
-
-    private void ApplyFeedbackToPreview(bool validity)
-    {
-        Color c = validity ? Color.gray : Color.red;
-        c.a = 0.5f;
-        previewRenderer.material.color = c;
-    }
-
-    private void ApplyFeedbackToCursor(bool validity)
-    {
-        Color c = validity ? Color.gray : Color.red;
-    }
-
-    public void UpdatePosition(Vector3 position, bool validity)
-    {
-            ApplyFeedbackToPreview(validity);
-            ApplyFeedbackToCursor(validity);
-    }
-
-    internal void ShowRemovePreview()
-    {
-        PrepareCursor(Vector2Int.one);
-        ApplyFeedbackToCursor(false);
-    }
-
-    public void StopShowingPreview()
-    {
-        cellIndicator.SetActive(false);
     }
 }

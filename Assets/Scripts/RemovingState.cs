@@ -9,29 +9,27 @@ public class RemovingState : IBuildingState
     GridData groundData;
     GridData blockData;
     InteractablePlacer interactablePlacer;
-    PlacementSystem placementSystem;
+    PreviewSystem preview;
 
-
-    // Shows remove preview
     public RemovingState(Grid grid,
                          GridData groundData,
                          GridData blockData,
                          InteractablePlacer interactablePlacer,
-                         PlacementSystem placementSystem)
+                         PreviewSystem preview)
     {
         this.grid = grid;
         this.groundData = groundData;
         this.blockData = blockData;
         this.interactablePlacer = interactablePlacer;
-        this.placementSystem = placementSystem;
-
-        placementSystem.ShowRemovePreview();
+        this.preview = preview;
+        // Shows remove preview
+        preview.ShowRemovePreview();
     }
 
     public void EndState()
     {
         // Stops showing placement preview
-        placementSystem.StopShowingPreview();
+        preview.StopShowingPreview();
     }
 
     public void OnAction(Vector3Int gridPosition)
@@ -67,7 +65,7 @@ public class RemovingState : IBuildingState
         }
         // Updates preview
         Vector3 cellPosition = grid.CellToWorld(gridPosition);
-        placementSystem.UpdatePosition(cellPosition, CheckIfSelectionIsValid(gridPosition));
+        preview.UpdatePosition(cellPosition, CheckIfSelectionIsValid(gridPosition));
     }
 
     private bool CheckIfSelectionIsValid(Vector3Int gridPosition)
@@ -80,7 +78,7 @@ public class RemovingState : IBuildingState
     {
         // Checks if selection is valid and removes item from grid
         bool validity = CheckIfSelectionIsValid(gridPosition);
-        placementSystem.UpdatePosition(grid.CellToWorld(gridPosition), validity);
-        
+        preview.UpdatePosition(grid.CellToWorld(gridPosition), validity);
+
     }
 }
