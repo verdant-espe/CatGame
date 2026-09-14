@@ -2,6 +2,7 @@ using System;
 using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 
 public class PlacementSystem : MonoBehaviour
 {
@@ -17,9 +18,6 @@ public class PlacementSystem : MonoBehaviour
     // References database
     [SerializeField] private InteractablesDatabase database;
 
-    // References PreviewSystem
-    [SerializeField] private PreviewSystem preview;
-
     // References item selected from index
     private int selectedInteractableIndex = -1;
 
@@ -31,9 +29,6 @@ public class PlacementSystem : MonoBehaviour
 
     // Creates a preview of the item
     private Renderer previewRenderer;
-
-    // Creates a list for GameObjects
-    private List<GameObject> placedGameObject = new();
 
     // Creates placement preview
     private Vector3Int lastDetectedPosition = Vector3Int.zero;
@@ -79,7 +74,7 @@ public class PlacementSystem : MonoBehaviour
         // Shows where interactable will be placed
         cellIndicator.SetActive(true);
 
-        // Places down interactable
+        // Places down item
         inputManager.OnClicked += PlaceStructure;
 
         // Stops placement after left mouse button is clicked
@@ -90,14 +85,29 @@ public class PlacementSystem : MonoBehaviour
     {
         // Calls StopPlacement
         StopPlacement();
+
         // Activates gridVisual
         gridVisual.SetActive(true);
-        // Calls RemovingState
-        buildingState = new RemovingState(grid, groundData, blockData, interactablePlacer, preview);
-        // Places down interactable
+
+        // Gets the selected position of ground
+        Vector3 mousePosition = inputManager.selectGroundPos();
+
+        // Converts mouse position to the grid
+        Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+
+        // sets index equal to PlaceItem
+        int index = interactablePlacer.PlaceItem(database.interactableData[selectedInteractableIndex].Prefab, grid.CellToWorld(gridPosition));
+
+        // If selectedData and interactableData equals 0, return ground and block data
+        GridData selectedData = database.interactableData[selectedInteractableIndex].ID == 0 ? groundData : blockData;
+
+        // Removes item
+        selectedData.RemoveItemAt(gridPosition);
+
+        // Removes item
         inputManager.OnClicked += PlaceStructure;
 
-        // Stops placement after left mouse button is clicked
+        // Stops remove after left mouse button is clicked
         inputManager.OnExit += StopPlacement;
     }
 
@@ -129,6 +139,7 @@ public class PlacementSystem : MonoBehaviour
 
         // Accesses item from list
         selectedData.AddItemAt(gridPosition, database.interactableData[selectedInteractableIndex].Size, database.interactableData[selectedInteractableIndex].ID, index);
+
     }
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedInteractableIndex)

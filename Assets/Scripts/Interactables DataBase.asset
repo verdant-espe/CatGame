@@ -16,20 +16,24 @@ MonoBehaviour:
   - <Name>k__BackingField: Grass Block
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 2475181366647167262, guid: 2cc89f18bac6a9743a529d236872792a, type: 3}
+    <Prefab>k__BackingField: {fileID: 7318667215967614082, guid: ec1100175648af24fb57d9ca41c0efb7, type: 3}
   - <Name>k__BackingField: Stone Block
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 6776706195774156997, guid: f1f536fc4efab8a44b5910615d892ec1, type: 3}
+    <Prefab>k__BackingField: {fileID: 7667120120840311202, guid: a62502a79ad934349830e264e94e1a8a, type: 3}
   - <Name>k__BackingField: Sand Block
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 5067764940572219225, guid: ee12457c58b48b4498ada940968f4b44, type: 3}
+    <Prefab>k__BackingField: {fileID: 8066328592783346657, guid: f8687a6447edb534c8e0683dc2e6a859, type: 3}
   - <Name>k__BackingField: Snow Block
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 557769677845601722, guid: e635a6ab4e651814089f965aa96c336f, type: 3}
+    <Prefab>k__BackingField: {fileID: 3309649803471156001, guid: e635a6ab4e651814089f965aa96c336f, type: 3}
   - <Name>k__BackingField: Wood Block
     <ID>k__BackingField: 4
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 1701470807018619185, guid: 4845ac9d0d5399c4ebd90f63e929a297, type: 3}
+    <Prefab>k__BackingField: {fileID: 225303124188549165, guid: 4845ac9d0d5399c4ebd90f63e929a297, type: 3}
+  - <Name>k__BackingField: Tree
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 2, y: 1}
+    <Prefab>k__BackingField: {fileID: 8225053225276275727, guid: 2f7ccd75e952594448736cf738ef53d2, type: 3}

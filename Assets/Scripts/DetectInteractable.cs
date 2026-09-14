@@ -3,47 +3,48 @@ using UnityEngine;
 public class DetectInteractable : MonoBehaviour
 {
     // Creates a rigidbody class for the interactable
-    private Rigidbody interactableRigidbody;
+    private Rigidbody rb;
     // Stores grab point
-    private Transform interactableGrabPointTransform;
+    private Transform itemGrabPointTransform;
 
     // Calls rigidbody components
     private void Awake()
     {
-        interactableRigidbody = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
     // Sets grab point for interactable
     public void Grab(Transform interactableGrabPointTransform)
     {
         // Updates grab point
-        this.interactableGrabPointTransform = interactableGrabPointTransform;
+        this.itemGrabPointTransform = interactableGrabPointTransform;
         // Disables gravity upon selecting interactable
-        interactableRigidbody.useGravity = false;
+        rb.useGravity = false;
+        rb.isKinematic = false;
     }
 
     // Sets when the player drops the object
    public void Drop()
     {
         // Sets grab point to null
-        this.interactableGrabPointTransform = null;
+        this.itemGrabPointTransform = null;
         // Enables gravity when interactable is dropped
-        interactableRigidbody.useGravity = true;
+        rb.useGravity = true;
     }
     
     // Moves interactable rigidbody
     private void FixedUpdate()
     {
         // If grab point isn't null, move position of interactable
-        if(interactableGrabPointTransform != null)
+        if(itemGrabPointTransform != null)
         {
             // Sets lerp speed
             float lerpSpeed = 10f;
 
             // Makes interactable move smoother
-            Vector3 newPosition = Vector3.Lerp(transform.position, interactableGrabPointTransform.position, Time.deltaTime * lerpSpeed);
+            Vector3 newPosition = Vector3.Lerp(transform.position, itemGrabPointTransform.position, Time.deltaTime * lerpSpeed);
             
             // Moves position of interactable with player
-            interactableRigidbody.MovePosition(newPosition);
+            rb.MovePosition(newPosition);
         }
     }
 }
