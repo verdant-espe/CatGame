@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3988956509138922839}
   - component: {fileID: 3047803658651145427}
   - component: {fileID: 8705402673928509504}
+  - component: {fileID: 5733265523309787309}
   m_Layer: 0
   m_Name: Sand
   m_TagString: Interactable
@@ -419,6 +420,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &5733265523309787309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2407531150497673628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!1 &8066328592783346657
 GameObject:
   m_ObjectHideFlags: 0

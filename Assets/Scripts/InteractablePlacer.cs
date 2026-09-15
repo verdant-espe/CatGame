@@ -32,4 +32,12 @@ public class InteractablePlacer : MonoBehaviour
         Destroy(placedGameObject[gameObjectIndex]);
         placedGameObject[gameObjectIndex] = null;
     }
+
+    internal void RemoveItem(GameObject gameObjectIndex)
+    {
+        placedGameObject.Remove(gameObjectIndex);
+        // Else, destroy item
+        Destroy(gameObjectIndex);
+       
+    }
 }

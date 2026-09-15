@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 276001960200967074}
   - component: {fileID: 5114189327710015035}
   - component: {fileID: 6322605758807014182}
+  - component: {fileID: 3833043925168135081}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Interactable
@@ -419,6 +420,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &3833043925168135081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167331708033222756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!1 &7667120120840311202
 GameObject:
   m_ObjectHideFlags: 0

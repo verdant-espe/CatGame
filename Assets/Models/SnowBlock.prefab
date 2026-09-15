@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8594769943084130484}
   - component: {fileID: 3319207848446437288}
   - component: {fileID: 530577937726575565}
+  - component: {fileID: 1076829584216402807}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Interactable
@@ -419,6 +420,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &1076829584216402807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139496039110863036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!1 &3309649803471156001
 GameObject:
   m_ObjectHideFlags: 0

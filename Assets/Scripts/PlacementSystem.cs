@@ -21,6 +21,8 @@ public class PlacementSystem : MonoBehaviour
     // References item selected from index
     private int selectedInteractableIndex = -1;
 
+    private int currentPlacedItem = 0;
+
     // Triggers on and off grid visualization
     [SerializeField] private GameObject gridVisual;
 
@@ -36,7 +38,12 @@ public class PlacementSystem : MonoBehaviour
     // References InteractablePlacer
     [SerializeField] private InteractablePlacer interactablePlacer;
 
-    IBuildingState buildingState;
+    // Creates a list for GameObjects
+    [SerializeField]
+    private List<GameObject> placedGameObject = new();
+
+
+
 
     private void Start()
     {
@@ -86,28 +93,27 @@ public class PlacementSystem : MonoBehaviour
         // Calls StopPlacement
         StopPlacement();
 
-        // Activates gridVisual
+        // Enables gridVisual
         gridVisual.SetActive(true);
 
-        // Gets the selected position of ground
+        // Enables indicator
+        cellIndicator.SetActive(false);
+
+        // Gets the selected position of the mouse
         Vector3 mousePosition = inputManager.selectGroundPos();
 
         // Converts mouse position to the grid
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
-        // sets index equal to PlaceItem
-        int index = interactablePlacer.PlaceItem(database.interactableData[selectedInteractableIndex].Prefab, grid.CellToWorld(gridPosition));
-
-        // If selectedData and interactableData equals 0, return ground and block data
-        GridData selectedData = database.interactableData[selectedInteractableIndex].ID == 0 ? groundData : blockData;
+        selectedInteractableIndex = 0;
 
         // Removes item
-        selectedData.RemoveItemAt(gridPosition);
+        interactablePlacer.RemoveItem(ItemSelector.lastSelectedItem);
 
-        // Removes item
-        inputManager.OnClicked += PlaceStructure;
+        // When mouse is clicked, item is removed
+        inputManager.OnClicked -= PlaceStructure;
 
-        // Stops remove after left mouse button is clicked
+        // Stops remove after click
         inputManager.OnExit += StopPlacement;
     }
 
@@ -144,7 +150,6 @@ public class PlacementSystem : MonoBehaviour
 
     private bool CheckPlacementValidity(Vector3Int gridPosition, int selectedInteractableIndex)
     {
-        // If selectedData and interactableData equals 0, return ground and block data
         GridData selectedData = database.interactableData[selectedInteractableIndex].ID == 0 ? groundData : blockData;
 
         // Returns size of interactableData

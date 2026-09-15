@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4603239233139014763}
   - component: {fileID: 2210153615832191158}
   - component: {fileID: 4757339586112969770}
+  - component: {fileID: 4626658093964070600}
   m_Layer: 0
   m_Name: GrassBlock (3)
   m_TagString: Interactable
@@ -420,6 +421,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &4626658093964070600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072373680497265812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!1 &1450227680005234934
 GameObject:
   m_ObjectHideFlags: 0

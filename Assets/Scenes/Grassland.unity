@@ -3236,6 +3236,7 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: b8bf682b92f9e334b92d217efb36f240, type: 2}
   gridVisual: {fileID: 1309121668}
   interactablePlacer: {fileID: 1480880488}
+  placedGameObject: []
 --- !u!1 &902516513
 GameObject:
   m_ObjectHideFlags: 0

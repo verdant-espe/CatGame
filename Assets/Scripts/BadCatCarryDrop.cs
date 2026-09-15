@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BadCatCarryDrop : MonoBehaviour
@@ -30,7 +31,7 @@ public class BadCatCarryDrop : MonoBehaviour
                     Debug.Log(raycastHit, transform);
                 }
                 // If raycast detects an interactable, show in debug console
-                if (raycastHit.transform.TryGetComponent(out detectInteractable))
+                if (raycastHit.transform != null && raycastHit.transform.TryGetComponent(out detectInteractable))
                 {
                     detectInteractable.Grab(interactableGrabPointTransform);
                     Debug.Log(detectInteractable);

@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 3110961364011126126}
   - component: {fileID: 1342589998183191077}
   - component: {fileID: 4143660793767454122}
+  - component: {fileID: 660713358559711869}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Interactable
@@ -451,3 +452,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &660713358559711869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6596083869482833456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
