@@ -21,6 +21,7 @@ public class PlacementSystem : MonoBehaviour
     // References item selected from index
     private int selectedInteractableIndex = -1;
 
+    // References currently placed item on grid
     private int currentPlacedItem = 0;
 
     // Triggers on and off grid visualization
@@ -41,9 +42,6 @@ public class PlacementSystem : MonoBehaviour
     // Creates a list for GameObjects
     [SerializeField]
     private List<GameObject> placedGameObject = new();
-
-
-
 
     private void Start()
     {
@@ -105,6 +103,7 @@ public class PlacementSystem : MonoBehaviour
         // Converts mouse position to the grid
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
+        // Sets selectedInteractableIndex
         selectedInteractableIndex = 0;
 
         // Removes item
@@ -194,6 +193,19 @@ public class PlacementSystem : MonoBehaviour
 
             // If placementValidity is false, make indicator red
             previewRenderer.material.color = placementValidity ? Color.lightGreen : Color.red;
+
+            // Converts grid position back to world position
+            cellIndicator.transform.position = grid.CellToWorld(gridPosition);
+        }
+
+        // If lastDetectedPosition is not equal to gridPosition and ItemSelector is active, change cell indicator color
+        if (lastDetectedPosition != gridPosition && ItemSelector.lastSelectedItem.gameObject.activeInHierarchy)
+        {
+            // Checks validity of placement
+            bool placementValidity = CheckPlacementValidity(gridPosition, selectedInteractableIndex);
+
+            // If placementValidity is false, make indicator red
+            previewRenderer.material.color = placementValidity ? Color.lightBlue : Color.darkRed;
 
             // Converts grid position back to world position
             cellIndicator.transform.position = grid.CellToWorld(gridPosition);
