@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 673825392447362648}
   m_Layer: 0
   m_Name: TheGrassItself
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 715726178770747955}
   m_Layer: 0
   m_Name: GrassBlock
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
