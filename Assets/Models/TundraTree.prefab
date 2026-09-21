@@ -366,7 +366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5720336100374254426}
   m_Layer: 0
-  m_Name: Tundra_Tree
+  m_Name: TundraTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

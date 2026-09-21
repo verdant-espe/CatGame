@@ -12,13 +12,13 @@ public class BadCatController : MonoBehaviour
     private float moveSpeed = 2.0f;
 
     // Controls player jump
-    public Vector3 jump;
+    private Vector3 jump;
 
     // Controls player jump force
-    private float jumpForce = 5.5f;
+    private float jumpForce = 6.0f;
 
     // Tells whether or not player is grounded
-    public bool isGrounded;
+    private bool isGrounded;
 
     // References Rigidbody
     Rigidbody rb;

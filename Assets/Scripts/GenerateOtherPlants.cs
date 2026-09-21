@@ -1,36 +1,35 @@
 using UnityEngine;
-using UnityEngine.VFX;
 
-public class GenerateTrees : MonoBehaviour
+public class GenerateOtherPlants : MonoBehaviour
 {
-    // References tree model
-    public GameObject tree;
+    // References plant model
+    public GameObject plant;
 
-    // Maximum time the trees spawn in
-    public float maxTime = 10f;
+    // Maximum time the plants spawn in
+    public float maxTime = 8f;
 
-    // Minimum time the trees spawn in
+    // Minimum time the plants spawn in
     public float minTime = 5;
 
     // Current game time
     private float time;
 
-    // Time tree spawns
+    // Time plant spawns
     private float spawnTime;
 
-    // Limit where the tree spawns on Y axis
+    // Limit where the plant spawns on Y axis
     private float spawnLimitY = 0.9483199F;
 
-    // Limit where the tree spawns on X axis (right)
+    // Limit where the plant spawns on X axis (right)
     private float spawnLimitXRight = 10.649f;
 
-    // Limit where the tree spawns on X axis (left)
+    // Limit where the plant spawns on X axis (left)
     private float spawnLimitXLeft = -7.462f;
 
-    // Limit where the tree spawns on Z axis (front)
+    // Limit where the plant spawns on Z axis (front)
     private float spawnLimitZFront = -16.22f;
 
-    // Limit where the tree spawns on Z axis (back)
+    // Limit where the plant spawns on Z axis (back)
     private float spawnLimitZBack = 1.9f;
 
 
@@ -47,8 +46,8 @@ public class GenerateTrees : MonoBehaviour
         // Counts time up
         time += Time.deltaTime;
 
-        // If time is less than/equal to spawnTime, spawn a tree and set a random time
-        if(time >= spawnTime)
+        // If time is less than/equal to spawnTime, spawn a plant and set a random time
+        if (time >= spawnTime)
         {
             SpawnTree();
             SetRandomTime();
@@ -56,14 +55,14 @@ public class GenerateTrees : MonoBehaviour
     }
     void SpawnTree()
     {
-        // Spawns tree at random position
+        // Spawns plant at random position
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnLimitY, Random.Range(spawnLimitZBack, spawnLimitZFront));
 
         // Resets time
         time = 0;
 
-        // Spawns in a tree
-        Instantiate(tree, spawnPos, tree.transform.rotation);
+        // Spawns in a plant
+        Instantiate(plant, spawnPos, plant.transform.rotation);
     }
 
     void SetRandomTime()
