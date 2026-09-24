@@ -14,7 +14,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         // Saves original parent before drag
         parentAfterDrag = transform.parent;
 
-        // Sets canvas as parent
+        // Makes canvas parent
         transform.SetParent(transform.root);
 
         // Sets it at top layer of canvas
