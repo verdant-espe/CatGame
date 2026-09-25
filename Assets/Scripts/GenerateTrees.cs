@@ -7,10 +7,10 @@ public class GenerateTrees : MonoBehaviour
     public GameObject tree;
 
     // Maximum time the trees spawn in
-    public float maxTime = 10f;
+    private float maxTime = 25f;
 
     // Minimum time the trees spawn in
-    public float minTime = 5;
+    private float minTime = 15f;
 
     // Current game time
     private float time;

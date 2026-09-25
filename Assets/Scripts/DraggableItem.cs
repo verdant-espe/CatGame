@@ -1,10 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // Keeps icon on top of inventory
-    Transform parentAfterDrag;
+    // References icon image
+    public Image image;
+
+    // Keeps icon on top of inventory and hides it in the editor
+    [HideInInspector] public Transform parentAfterDrag;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -19,6 +23,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         // Sets it at top layer of canvas
         transform.SetAsLastSibling();
+
+        // Disables interaction with item
+        image.raycastTarget = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -37,6 +44,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         // Assign parent after drag
         transform.SetParent(parentAfterDrag);
+
+        // Enables interaction with item
+        image.raycastTarget = true;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

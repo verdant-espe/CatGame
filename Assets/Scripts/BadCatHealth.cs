@@ -62,12 +62,19 @@ public class BadCatHealth : MonoBehaviour
     // Keeps track of damage player takes
     public void TakeDamage(int damgAmount)
     {
-        // If health is less than 0, player dies
+        // Item deals player 1 damage
         health -=damgAmount;
 
+        // If health is less than 0, player dies
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    // Keeps track of health regeneration
+    public void HealthRegen(int healthRegenAmount)
+    {
+        health += healthRegenAmount;
     }
 }

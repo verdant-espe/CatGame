@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8119143166339821225}
   - component: {fileID: 3086996350607644988}
   - component: {fileID: 5995247010354353485}
+  - component: {fileID: 2913822024922702018}
   m_Layer: 0
   m_Name: FruitItself
   m_TagString: Untagged
@@ -154,6 +155,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17, y: 0.17, z: 0.03215313}
   m_Center: {x: 0, y: 0, z: 0.0013256073}
+--- !u!114 &2913822024922702018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274220234732701065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436fe4df789d4104bb4c18c96ee07ba7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitHeal
+  playerHealth: {fileID: 0}
+  healthRegen: 1
 --- !u!1 &4058267861552977464
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,10 +6,10 @@ public class GenerateOtherPlants : MonoBehaviour
     public GameObject plant;
 
     // Maximum time the plants spawn in
-    public float maxTime = 8f;
+    private float maxTime = 15f;
 
     // Minimum time the plants spawn in
-    public float minTime = 5;
+    private float minTime = 10f;
 
     // Current game time
     private float time;
