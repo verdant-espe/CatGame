@@ -8,9 +8,9 @@ public class InteractableDamage : MonoBehaviour
     // Sets damage for harmful items
     public int damage = 1;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider col)
     {
-        if(collision.gameObject.tag == "Player")
+        if(col.gameObject.tag == "Player")
         {
             // Item damage deals player one damage
             playerHealth.TakeDamage(damage);

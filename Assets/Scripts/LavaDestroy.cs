@@ -5,7 +5,8 @@ public class LavaDestroy : MonoBehaviour
 {
     // Gets game object
     GameObject interactable;
-    void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider col)
     {
         // Finds any game object with the tag "Interactable"
         interactable = GameObject.FindWithTag("Interactable");
