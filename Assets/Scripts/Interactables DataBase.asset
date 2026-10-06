@@ -29,11 +29,19 @@ MonoBehaviour:
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 3309649803471156001, guid: e635a6ab4e651814089f965aa96c336f, type: 3}
-  - <Name>k__BackingField: Wood Block
+  - <Name>k__BackingField: Wood Block (Grassland)
     <ID>k__BackingField: 4
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 225303124188549165, guid: 4845ac9d0d5399c4ebd90f63e929a297, type: 3}
-  - <Name>k__BackingField: Tree
+  - <Name>k__BackingField: Wood Block (Beach)
     <ID>k__BackingField: 5
-    <Size>k__BackingField: {x: 2, y: 1}
-    <Prefab>k__BackingField: {fileID: 8225053225276275727, guid: 2f7ccd75e952594448736cf738ef53d2, type: 3}
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4358740703029883266, guid: ead75820a9745e54ab846399deb280d5, type: 3}
+  - <Name>k__BackingField: Wood Block (Tundra)
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 1750120650760627325, guid: 38c7ea31d22a69141866025d7f9f16c1, type: 3}
+  - <Name>k__BackingField: Ice Block
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 6680679759790471112, guid: 17e909d4a1498434c84eb2886bff03d4, type: 3}
