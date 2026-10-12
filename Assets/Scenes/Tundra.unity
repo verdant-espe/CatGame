@@ -1709,6 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 930ac80204b35f848b1d1870f29fdc4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeAnim
+  badCatHealth: {fileID: 0}
 --- !u!95 &508490393
 Animator:
   serializedVersion: 7
@@ -2051,39 +2052,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510708546}
   m_CullTransparentMesh: 1
---- !u!1 &521314877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 521314878}
-  m_Layer: 0
-  m_Name: '- UI -'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &521314878
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521314877}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1666789367}
-  - {fileID: 1215306967}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &538294240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4659,11 +4627,11 @@ Transform:
   m_GameObject: {fileID: 1215306966}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -960, y: -540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 521314878}
+  m_Father: {fileID: 1666789367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1215306968
 MonoBehaviour:
@@ -5846,7 +5814,7 @@ GameObject:
   - component: {fileID: 1666789368}
   - component: {fileID: 1666789371}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: '- UI -'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5871,7 +5839,8 @@ RectTransform:
   - {fileID: 577918127}
   - {fileID: 330561183}
   - {fileID: 151772251}
-  m_Father: {fileID: 521314878}
+  - {fileID: 1215306967}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5979,7 +5948,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25099993, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.006, y: 0.9732364, z: 0.979}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1408682742}
@@ -6046,7 +6015,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.006, y: 0.9732364, z: 0.979}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1786493964}
@@ -6580,7 +6549,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.006, y: 0.9732364, z: 0.979}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1343305453}
@@ -7100,7 +7069,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 681220187}
-  - {fileID: 521314878}
+  - {fileID: 1666789367}
   - {fileID: 1164765052}
   - {fileID: 1529970818}
   - {fileID: 1724032758}

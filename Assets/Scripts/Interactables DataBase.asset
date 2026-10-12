@@ -40,7 +40,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Wood Block (Tundra)
     <ID>k__BackingField: 6
     <Size>k__BackingField: {x: 1, y: 1}
-    <Prefab>k__BackingField: {fileID: 1750120650760627325, guid: 38c7ea31d22a69141866025d7f9f16c1, type: 3}
+    <Prefab>k__BackingField: {fileID: 2442831490477191504, guid: 60690b753df3947439c0d24b6ca3dc56, type: 3}
   - <Name>k__BackingField: Ice Block
     <ID>k__BackingField: 7
     <Size>k__BackingField: {x: 1, y: 1}

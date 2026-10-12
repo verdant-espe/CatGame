@@ -21,9 +21,6 @@ public class PlacementSystem : MonoBehaviour
     // References item selected from index
     private int selectedInteractableIndex = -1;
 
-    // References currently placed item on grid
-    private int currentPlacedItem = 0;
-
     // Triggers on and off grid visualization
     [SerializeField] private GameObject gridVisual;
 

@@ -9,6 +9,9 @@ public class ChangeAnim : MonoBehaviour
     // References player rigidbody
     Rigidbody rb;
 
+    // References player health
+    public BadCatHealth badCatHealth;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -83,11 +86,12 @@ public class ChangeAnim : MonoBehaviour
     }
 
     // Changes to hurt sprite when player touches harmful item
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider col)
     {
-        if (collision.gameObject.tag == "Harm")
+        if (col.gameObject.tag == "Harm")
         {
-            catAnimator.SetBool("DoHurt", true);
+            badCatHealth = GetComponent<BadCatHealth>();
+            catAnimator.SetTrigger("DoHurt");
         }
     }
 }
