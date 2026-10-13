@@ -12,8 +12,6 @@ public class BadCatCarryDrop : MonoBehaviour
     // Stores a private DetectGrabbable
     private DetectInteractable detectInteractable;
 
-    private int itemDirection;
-
     private void Update()
     {
         // If left mouse button clicked, player picks up an object
