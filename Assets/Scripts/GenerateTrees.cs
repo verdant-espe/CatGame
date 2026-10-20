@@ -18,6 +18,9 @@ public class GenerateTrees : MonoBehaviour
     // Time tree spawns
     private float spawnTime;
 
+    // Max amount of trees in scene / WIP
+    public int maxTreeNumb;
+
     // Limit where the tree spawns on Y axis
     private float spawnLimitY = 0.9483199F;
 
@@ -61,6 +64,9 @@ public class GenerateTrees : MonoBehaviour
 
         // Resets time
         time = 0;
+
+        // Sets maxTreeNumb to 15
+        maxTreeNumb = 15;
 
         // Spawns in a tree
         Instantiate(tree, spawnPos, tree.transform.rotation);
