@@ -45,3 +45,15 @@ MonoBehaviour:
     <ID>k__BackingField: 7
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 6680679759790471112, guid: 17e909d4a1498434c84eb2886bff03d4, type: 3}
+  - <Name>k__BackingField: Wood Plank (Grassland)
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 6121700176748442525, guid: f9933d9c130f23c4eacdcea309253b2f, type: 3}
+  - <Name>k__BackingField: Wood Plank (Beach)
+    <ID>k__BackingField: 9
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7292916455555894139, guid: 939032768527dea468b58e630dadc375, type: 3}
+  - <Name>k__BackingField: Wood Plank (Tundra)
+    <ID>k__BackingField: 10
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8249358762625913044, guid: 2d13541e7ba833349b14cadea968cc20, type: 3}

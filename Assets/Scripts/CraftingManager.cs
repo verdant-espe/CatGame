@@ -1,12 +1,27 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class CraftingManager : MonoBehaviour
 {
     // Current item in the slot
     private Item currentItem;
 
+    // Stores an array of crafting slots
     public CraftSlot[] craftSlots;
+
+    // Stores a list of items
+    public List<Item> itemList;
+
+    // Creates recipes for crafting items
+    public string[] recipes;
+
+    // Creates result after crafting recipe
+    public Item[] recipeResults;
+
+    // Contains the result slot
+    public CraftSlot resultSlot;
 
     private void Update()
     {
@@ -33,10 +48,39 @@ public class CraftingManager : MonoBehaviour
                 }
                 // Sets nearestSlot to active
                 nearestSlot.gameObject.SetActive(true);
+
                 // Sets nearestSlot item equal to currentItem
                 nearestSlot.item = currentItem;
+
+                // Keeps track of what slot has what item
+                itemList[nearestSlot.index] = currentItem;
+
                 // currentItem is set back to null
                 currentItem = null;
+            }
+        }
+    }
+
+    void CheckForCompletedRecipes()
+    {
+        // Disables result slot
+        resultSlot.gameObject.SetActive(false);
+        // Sets result item slot to null
+        resultSlot.item = null;
+        // Sets currentRecipeString to an empty string
+        string currentRecipeString = "";
+
+        foreach(Item item in itemList)
+        {
+            // If item is not equal to null, add current recipe string to item name
+            if(item != null)
+            {
+                currentRecipeString += item.itemName;
+            }
+            // Else, it is null
+            else
+            {
+                currentRecipeString += null;
             }
         }
     }

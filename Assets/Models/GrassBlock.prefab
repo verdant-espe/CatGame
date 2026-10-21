@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4757339586112969770}
   - component: {fileID: 4626658093964070600}
   m_Layer: 0
-  m_Name: GrassBlock (3)
+  m_Name: GrassBlock
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
