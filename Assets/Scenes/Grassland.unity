@@ -1060,7 +1060,7 @@ MonoBehaviour:
   - {fileID: 1174022672}
   - {fileID: 1098494935}
   - {fileID: 802938708}
-  resultSlot: {fileID: 0}
+  resultSlot: {fileID: 486236642}
 --- !u!4 &135678289
 Transform:
   m_ObjectHideFlags: 0
@@ -1250,6 +1250,7 @@ GameObject:
   - component: {fileID: 258441516}
   - component: {fileID: 258441519}
   - component: {fileID: 258441520}
+  - component: {fileID: 258441521}
   m_Layer: 5
   m_Name: CraftSlot1
   m_TagString: Untagged
@@ -1271,10 +1272,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258441516
 MonoBehaviour:
@@ -1364,6 +1365,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 0
+--- !u!114 &258441521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258441514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 258441520}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!43 &269172835
 Mesh:
   m_ObjectHideFlags: 0
@@ -2461,6 +2491,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468793689}
   m_CullTransparentMesh: 1
+--- !u!1 &486236638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486236639}
+  - component: {fileID: 486236641}
+  - component: {fileID: 486236640}
+  - component: {fileID: 486236642}
+  m_Layer: 5
+  m_Name: Result
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &486236639
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486236638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1554769377}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 53, y: -50.5116}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &486236640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486236638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &486236641
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486236638}
+  m_CullTransparentMesh: 1
+--- !u!114 &486236642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486236638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61314adb6b745da40b01c7c7bd0a0c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
+  item: {fileID: 0}
+  index: 0
 --- !u!1001 &492037861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2669,7 +2789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &509439142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2780,6 +2900,7 @@ GameObject:
   - component: {fileID: 544744110}
   - component: {fileID: 544744109}
   - component: {fileID: 544744113}
+  - component: {fileID: 544744114}
   m_Layer: 5
   m_Name: CraftSlot6
   m_TagString: Untagged
@@ -2801,10 +2922,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544744109
 MonoBehaviour:
@@ -2894,6 +3015,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 5
+--- !u!114 &544744114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544744107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 544744113}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &586683789
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,6 +3768,7 @@ GameObject:
   - component: {fileID: 759723924}
   - component: {fileID: 759723923}
   - component: {fileID: 759723927}
+  - component: {fileID: 759723928}
   m_Layer: 5
   m_Name: CraftSlot2
   m_TagString: Untagged
@@ -3639,10 +3790,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759723923
 MonoBehaviour:
@@ -3732,6 +3883,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 1
+--- !u!114 &759723928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759723921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 759723927}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &792327395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,6 +6502,7 @@ GameObject:
   - component: {fileID: 1287944667}
   - component: {fileID: 1287944666}
   - component: {fileID: 1287944670}
+  - component: {fileID: 1287944671}
   m_Layer: 5
   m_Name: CraftSlot3
   m_TagString: Untagged
@@ -6343,10 +6524,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1287944666
 MonoBehaviour:
@@ -6436,6 +6617,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 2
+--- !u!114 &1287944671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287944664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1287944670}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!43 &1307302722
 Mesh:
   m_ObjectHideFlags: 0
@@ -7440,7 +7650,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 486236639}
   m_Father: {fileID: 509439144}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7524,6 +7735,7 @@ GameObject:
   - component: {fileID: 1554911386}
   - component: {fileID: 1554911385}
   - component: {fileID: 1554911389}
+  - component: {fileID: 1554911390}
   m_Layer: 5
   m_Name: CraftSlot7
   m_TagString: Untagged
@@ -7545,10 +7757,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -250}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554911385
 MonoBehaviour:
@@ -7638,6 +7850,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 6
+--- !u!114 &1554911390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554911383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1554911389}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1583286695
 GameObject:
   m_ObjectHideFlags: 0
@@ -7776,6 +8017,7 @@ GameObject:
   - component: {fileID: 1605512120}
   - component: {fileID: 1605512119}
   - component: {fileID: 1605512123}
+  - component: {fileID: 1605512124}
   m_Layer: 5
   m_Name: CraftSlot5
   m_TagString: Untagged
@@ -7797,10 +8039,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605512119
 MonoBehaviour:
@@ -7890,6 +8132,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 4
+--- !u!114 &1605512124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605512117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1605512123}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1623386111
 GameObject:
   m_ObjectHideFlags: 0
@@ -7904,6 +8175,7 @@ GameObject:
   - component: {fileID: 1623386114}
   - component: {fileID: 1623386113}
   - component: {fileID: 1623386117}
+  - component: {fileID: 1623386118}
   m_Layer: 5
   m_Name: CraftSlot4
   m_TagString: Untagged
@@ -7925,10 +8197,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1623386113
 MonoBehaviour:
@@ -8018,6 +8290,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 3
+--- !u!114 &1623386118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623386111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1623386117}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1633524887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8589,6 +8890,7 @@ GameObject:
   - component: {fileID: 1787472055}
   - component: {fileID: 1787472054}
   - component: {fileID: 1787472058}
+  - component: {fileID: 1787472059}
   m_Layer: 5
   m_Name: CraftSlot8
   m_TagString: Untagged
@@ -8610,10 +8912,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -250}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787472054
 MonoBehaviour:
@@ -8703,6 +9005,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 7
+--- !u!114 &1787472059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787472052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1787472058}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1792857771
 GameObject:
   m_ObjectHideFlags: 0
@@ -10624,6 +10955,7 @@ RectTransform:
   - {fileID: 1174022668}
   - {fileID: 1098494931}
   - {fileID: 802938704}
+  - {fileID: 1994767804}
   m_Father: {fileID: 1002460542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -10693,6 +11025,250 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990360126}
   m_CullTransparentMesh: 1
+--- !u!1001 &1994767803
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1990360127}
+    m_Modifications:
+    - target: {fileID: 696443949507017227, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c3b6da42e71185c4c8b819aabbce436e, type: 3}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 898964288}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartPlacement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlacementSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967585758702825304, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600986018208430103, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 1994767806}
+    - target: {fileID: 4962546656676822855, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: index
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590381449575582518, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_Name
+      value: ItemSlot10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195121217230979755, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_Name
+      value: ItemIconBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481735907571208554, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7590381449575582518, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994767809}
+    - targetCorrespondingSourceObject: {fileID: 8195121217230979755, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994767808}
+  m_SourcePrefab: {fileID: 100100000, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+--- !u!224 &1994767804 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4971262673695263509, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+  m_PrefabInstance: {fileID: 1994767803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1994767805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8195121217230979755, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+  m_PrefabInstance: {fileID: 1994767803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994767806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 696443949507017227, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+  m_PrefabInstance: {fileID: 1994767803}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994767805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!1 &1994767807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7590381449575582518, guid: add094db031e1ed41b4f49fcdbdafe5c, type: 3}
+  m_PrefabInstance: {fileID: 1994767803}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994767808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994767805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe1aefd806941d458b000189e85b6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemName: Wood Plank (Tundra)
+  index: 10
+--- !u!114 &1994767809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994767807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnMouseDownItem
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1994767808}
+            m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2016473257
 GameObject:
   m_ObjectHideFlags: 0
@@ -10707,6 +11283,7 @@ GameObject:
   - component: {fileID: 2016473260}
   - component: {fileID: 2016473259}
   - component: {fileID: 2016473263}
+  - component: {fileID: 2016473264}
   m_Layer: 5
   m_Name: CraftSlot9
   m_TagString: Untagged
@@ -10728,10 +11305,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1652237508}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -250}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2016473259
 MonoBehaviour:
@@ -10821,6 +11398,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CraftSlot
   item: {fileID: 0}
   index: 8
+--- !u!114 &2016473264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016473257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 135678288}
+          m_TargetAssemblyTypeName: CraftingManager, Assembly-CSharp
+          m_MethodName: OnClickSlot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2016473263}
+            m_ObjectArgumentAssemblyTypeName: CraftSlot, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &2028091380
 PrefabInstance:
   m_ObjectHideFlags: 0

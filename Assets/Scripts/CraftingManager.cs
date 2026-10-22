@@ -83,6 +83,26 @@ public class CraftingManager : MonoBehaviour
                 currentRecipeString += null;
             }
         }
+        for(int i = 0; i < recipes.Length; i++)
+        {
+            // If recipes is equal to currentRecipeString, player has successfully created a recipe
+            if (recipes[i] == currentRecipeString)
+            {
+                resultSlot.gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void OnClickSlot(CraftSlot slot)
+    {
+        // No item in slot
+        slot.item = null;
+
+        // makes itemList equal to null
+        itemList[slot.index] = null;
+
+        // Calls CheckForCompletedRecipes
+        CheckForCompletedRecipes();
     }
 
     // If currentItem is null, set currentItem equal to item

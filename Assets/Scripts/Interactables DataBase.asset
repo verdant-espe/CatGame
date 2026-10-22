@@ -57,3 +57,7 @@ MonoBehaviour:
     <ID>k__BackingField: 10
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8249358762625913044, guid: 2d13541e7ba833349b14cadea968cc20, type: 3}
+  - <Name>k__BackingField: Brick Block
+    <ID>k__BackingField: 11
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 1178197466083211782, guid: 83519a3489ab08949924cc1722bfc3c8, type: 3}
