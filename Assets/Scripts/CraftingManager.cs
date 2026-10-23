@@ -88,7 +88,12 @@ public class CraftingManager : MonoBehaviour
             // If recipes is equal to currentRecipeString, player has successfully created a recipe
             if (recipes[i] == currentRecipeString)
             {
+                // Sets result slot active
                 resultSlot.gameObject.SetActive(true);
+                // Gets image of completed recipe result
+                resultSlot.GetComponent<Image>().sprite = recipeResults[i].GetComponent<Image>().sprite;
+                // Shows the resulted item
+                resultSlot.item = recipeResults[i];
             }
         }
     }
