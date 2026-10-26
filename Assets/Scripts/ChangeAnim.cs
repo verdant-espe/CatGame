@@ -19,6 +19,9 @@ public class ChangeAnim : MonoBehaviour
         catAnimator = GetComponent<Animator>();
     // Sets rigidbody for player 
         rb = GetComponent<Rigidbody>();
+
+    // Assigns badCatHealth to BadCatHealth script
+        badCatHealth = GetComponent<BadCatHealth>();
     }
 
     // Update is called once per frame
@@ -90,7 +93,6 @@ public class ChangeAnim : MonoBehaviour
     {
         if (col.gameObject.tag == "Harm")
         {
-            badCatHealth = GetComponent<BadCatHealth>();
             catAnimator.SetTrigger("DoHurt");
         }
     }

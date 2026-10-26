@@ -61,3 +61,11 @@ MonoBehaviour:
     <ID>k__BackingField: 11
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 1178197466083211782, guid: 83519a3489ab08949924cc1722bfc3c8, type: 3}
+  - <Name>k__BackingField: Clay Block
+    <ID>k__BackingField: 12
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 6328863763745318842, guid: 2571951dd91e60f40ba3498284dfa9b9, type: 3}
+  - <Name>k__BackingField: Glass Block
+    <ID>k__BackingField: 13
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4709743501268290295, guid: 578bf6136f378dc4db0ef0fef3d1dd66, type: 3}

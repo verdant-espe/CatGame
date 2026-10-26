@@ -49,6 +49,9 @@ public class CraftingManager : MonoBehaviour
                 // Sets nearestSlot to active
                 nearestSlot.gameObject.SetActive(true);
 
+                // Sets sprite of the current item into the slot
+                nearestSlot.GetComponent<Image>().sprite = currentItem.GetComponent<Image>().sprite;
+
                 // Sets nearestSlot item equal to currentItem
                 nearestSlot.item = currentItem;
 
@@ -67,9 +70,9 @@ public class CraftingManager : MonoBehaviour
         resultSlot.gameObject.SetActive(false);
         // Sets result item slot to null
         resultSlot.item = null;
+
         // Sets currentRecipeString to an empty string
         string currentRecipeString = "";
-
         foreach(Item item in itemList)
         {
             // If item is not equal to null, add current recipe string to item name
