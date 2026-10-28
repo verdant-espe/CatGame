@@ -69,3 +69,15 @@ MonoBehaviour:
     <ID>k__BackingField: 13
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 4709743501268290295, guid: 578bf6136f378dc4db0ef0fef3d1dd66, type: 3}
+  - <Name>k__BackingField: Logs (Grassland)
+    <ID>k__BackingField: 14
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 5999153419560819737, guid: cab7ddc056a42d64289ddecd45ec49d3, type: 3}
+  - <Name>k__BackingField: Logs (Beach)
+    <ID>k__BackingField: 15
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4543660426387527484, guid: 88b241f1973d4894bb6abc2ef2ccbdd2, type: 3}
+  - <Name>k__BackingField: Logs (Tundra)
+    <ID>k__BackingField: 16
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8098626034557222356, guid: 00e0e518a07714444bc650e789492609, type: 3}

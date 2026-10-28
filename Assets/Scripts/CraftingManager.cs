@@ -83,7 +83,7 @@ public class CraftingManager : MonoBehaviour
             // Else, it is null
             else
             {
-                currentRecipeString += null;
+                currentRecipeString += "null";
             }
         }
         for(int i = 0; i < recipes.Length; i++)
