@@ -3,7 +3,9 @@ using UnityEngine;
 public class GenerateOtherPlants : MonoBehaviour
 {
     // References plant model
-    public GameObject plant;
+    public GameObject plant1;
+
+    // public GameObject plant2;
 
     // Maximum time the plants spawn in
     private float maxTime = 15f;
@@ -49,11 +51,11 @@ public class GenerateOtherPlants : MonoBehaviour
         // If time is less than/equal to spawnTime, spawn a plant and set a random time
         if (time >= spawnTime)
         {
-            SpawnTree();
+            SpawnPlants();
             SetRandomTime();
         }
     }
-    void SpawnTree()
+    void SpawnPlants()
     {
         // Spawns plant at random position
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnLimitY, Random.Range(spawnLimitZBack, spawnLimitZFront));
@@ -62,7 +64,7 @@ public class GenerateOtherPlants : MonoBehaviour
         time = 0;
 
         // Spawns in a plant
-        Instantiate(plant, spawnPos, plant.transform.rotation);
+        Instantiate(plant1, spawnPos, plant1.transform.rotation);
     }
 
     void SetRandomTime()

@@ -13,35 +13,35 @@ MonoBehaviour:
   m_Name: Interactables DataBase
   m_EditorClassIdentifier: Assembly-CSharp::InteractablesDatabase
   interactableData:
-  - <Name>k__BackingField: Grass Block
+  - <Name>k__BackingField: Grass
     <ID>k__BackingField: 0
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 7318667215967614082, guid: ec1100175648af24fb57d9ca41c0efb7, type: 3}
-  - <Name>k__BackingField: Stone Block
+  - <Name>k__BackingField: Stone
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 7667120120840311202, guid: a62502a79ad934349830e264e94e1a8a, type: 3}
-  - <Name>k__BackingField: Sand Block
+  - <Name>k__BackingField: Sand
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8066328592783346657, guid: f8687a6447edb534c8e0683dc2e6a859, type: 3}
-  - <Name>k__BackingField: Snow Block
+  - <Name>k__BackingField: Snow
     <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 3309649803471156001, guid: e635a6ab4e651814089f965aa96c336f, type: 3}
-  - <Name>k__BackingField: Wood Block (Grassland)
+  - <Name>k__BackingField: Wood (Grassland)
     <ID>k__BackingField: 4
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 225303124188549165, guid: 4845ac9d0d5399c4ebd90f63e929a297, type: 3}
-  - <Name>k__BackingField: Wood Block (Beach)
+  - <Name>k__BackingField: Wood (Beach)
     <ID>k__BackingField: 5
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 4358740703029883266, guid: ead75820a9745e54ab846399deb280d5, type: 3}
-  - <Name>k__BackingField: Wood Block (Tundra)
+  - <Name>k__BackingField: Wood (Tundra)
     <ID>k__BackingField: 6
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 2442831490477191504, guid: 60690b753df3947439c0d24b6ca3dc56, type: 3}
-  - <Name>k__BackingField: Ice Block
+  - <Name>k__BackingField: Ice
     <ID>k__BackingField: 7
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 6680679759790471112, guid: 17e909d4a1498434c84eb2886bff03d4, type: 3}
@@ -57,15 +57,15 @@ MonoBehaviour:
     <ID>k__BackingField: 10
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8249358762625913044, guid: 2d13541e7ba833349b14cadea968cc20, type: 3}
-  - <Name>k__BackingField: Brick Block
+  - <Name>k__BackingField: Brick
     <ID>k__BackingField: 11
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 1178197466083211782, guid: 83519a3489ab08949924cc1722bfc3c8, type: 3}
-  - <Name>k__BackingField: Clay Block
+  - <Name>k__BackingField: Clay
     <ID>k__BackingField: 12
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 6328863763745318842, guid: 2571951dd91e60f40ba3498284dfa9b9, type: 3}
-  - <Name>k__BackingField: Glass Block
+  - <Name>k__BackingField: Glass
     <ID>k__BackingField: 13
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 4709743501268290295, guid: 578bf6136f378dc4db0ef0fef3d1dd66, type: 3}
@@ -81,3 +81,47 @@ MonoBehaviour:
     <ID>k__BackingField: 16
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8098626034557222356, guid: 00e0e518a07714444bc650e789492609, type: 3}
+  - <Name>k__BackingField: Sandstone
+    <ID>k__BackingField: 17
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 962005425284799669, guid: 15e21876a96adbd439e6ed0e8ccdf55d, type: 3}
+  - <Name>k__BackingField: Red Clay
+    <ID>k__BackingField: 18
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 579737919151703357, guid: 5697f21b684951e4691393f230b8dd96, type: 3}
+  - <Name>k__BackingField: Orange Clay
+    <ID>k__BackingField: 19
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4215674779684476393, guid: 9dbe9b555db31f740bdfade56aea2a74, type: 3}
+  - <Name>k__BackingField: Yellow Clay
+    <ID>k__BackingField: 20
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 1326455498808518000, guid: 84cd992d97210c1429e04cdd090f5355, type: 3}
+  - <Name>k__BackingField: Green Clay
+    <ID>k__BackingField: 21
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 5889369523980540586, guid: 267b1ef0252be114baffb3452a7f0dc8, type: 3}
+  - <Name>k__BackingField: Blue Clay
+    <ID>k__BackingField: 22
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 6167749311034916459, guid: f6c5c053979d8634a855b3d1da3c57a9, type: 3}
+  - <Name>k__BackingField: Purple Clay
+    <ID>k__BackingField: 23
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 414910478028695511, guid: b96029bb2d0a707438cfe548d522f402, type: 3}
+  - <Name>k__BackingField: Pink Clay
+    <ID>k__BackingField: 24
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2941032865715316621, guid: 8c83ac4942ef8ef4bbb16a3ea6e9b7d6, type: 3}
+  - <Name>k__BackingField: Brown Clay
+    <ID>k__BackingField: 25
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8868772969870003319, guid: 0441b88c765770842ad86d6ffd6ff558, type: 3}
+  - <Name>k__BackingField: White Clay
+    <ID>k__BackingField: 26
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 3413946229532549175, guid: 13f5deb88821d2c4a87c458a8ddfde90, type: 3}
+  - <Name>k__BackingField: Black Clay
+    <ID>k__BackingField: 27
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7656544592316469150, guid: 4b7d53b12c6bd364587cfb1c78adbee1, type: 3}
