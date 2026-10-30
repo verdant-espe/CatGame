@@ -5175,7 +5175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4223d22b1832ac4781b1104a4ce09f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GenerateOtherPlants
-  plant: {fileID: 2216599928825753635, guid: 2fdb56ca7570167408eabc7c2bf1e02a, type: 3}
+  plant1: {fileID: 0}
 --- !u!1 &999809828
 GameObject:
   m_ObjectHideFlags: 0

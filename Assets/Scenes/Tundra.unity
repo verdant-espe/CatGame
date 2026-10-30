@@ -2920,7 +2920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4223d22b1832ac4781b1104a4ce09f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GenerateOtherPlants
-  plant: {fileID: 2875208311766602060, guid: 3d719c0fb7364b84cbd385c67a0c9655, type: 3}
+  plant1: {fileID: 0}
 --- !u!1 &572815413
 GameObject:
   m_ObjectHideFlags: 0
