@@ -125,3 +125,23 @@ MonoBehaviour:
     <ID>k__BackingField: 27
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 7656544592316469150, guid: 4b7d53b12c6bd364587cfb1c78adbee1, type: 3}
+  - <Name>k__BackingField: Textured Red Clay
+    <ID>k__BackingField: 28
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 3779189026796576693, guid: e5f657d907dedf64a90df643406c2251, type: 3}
+  - <Name>k__BackingField: Textured Orange Clay
+    <ID>k__BackingField: 29
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2483357069146277837, guid: a7518047c3eae66469c68e5a5ec72f8b, type: 3}
+  - <Name>k__BackingField: Textured Yellow Clay
+    <ID>k__BackingField: 30
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 2397551570503401277, guid: f54b801c21009874a86f68169f4a166a, type: 3}
+  - <Name>k__BackingField: Textured Green Clay
+    <ID>k__BackingField: 31
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8667410706323297955, guid: fedddf271643a624196d24901ab9a3ec, type: 3}
+  - <Name>k__BackingField: Textured Blue Clay
+    <ID>k__BackingField: 32
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7336380878096675880, guid: 65aae67f87a167042b582df141d9e139, type: 3}

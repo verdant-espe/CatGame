@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6429456429965223062}
   - component: {fileID: 2060801862824312152}
   - component: {fileID: 2525484620058102530}
-  - component: {fileID: 8614248206517794638}
   m_Layer: 0
   m_Name: NutItself
   m_TagString: Untagged
@@ -155,20 +154,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22060719, y: 0.24955647, z: 0.03782386}
   m_Center: {x: 0.00027116266, y: 0.00057344773, z: 0.0013295211}
---- !u!114 &8614248206517794638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874815357321822675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436fe4df789d4104bb4c18c96ee07ba7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FruitHeal
-  playerHealth: {fileID: 0}
-  healthRegen: 1
 --- !u!1 &8754131813095461274
 GameObject:
   m_ObjectHideFlags: 0
