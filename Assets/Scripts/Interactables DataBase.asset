@@ -165,3 +165,15 @@ MonoBehaviour:
     <ID>k__BackingField: 37
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 4670321168837658793, guid: 0d710ff545bc2874996f8bc81b6cc90f, type: 3}
+  - <Name>k__BackingField: Door (Grassland)
+    <ID>k__BackingField: 38
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 870968297072695617, guid: 9caee3245067350479ed790493d2f383, type: 3}
+  - <Name>k__BackingField: Door (Beach)
+    <ID>k__BackingField: 39
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8418802219632013209, guid: c0187ae51110dff478197d643d977f7e, type: 3}
+  - <Name>k__BackingField: Door (Tundra)
+    <ID>k__BackingField: 40
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8720547545926051268, guid: 3b911c72e0e11b84bba6667f4986abeb, type: 3}
