@@ -8,6 +8,7 @@ TagManager:
   - Harm
   - Water
   - Tree
+  - Flower
   layers:
   - Default
   - TransparentFX

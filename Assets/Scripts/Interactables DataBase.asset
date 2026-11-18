@@ -177,3 +177,19 @@ MonoBehaviour:
     <ID>k__BackingField: 40
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 8720547545926051268, guid: 3b911c72e0e11b84bba6667f4986abeb, type: 3}
+  - <Name>k__BackingField: Pot
+    <ID>k__BackingField: 41
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 1938717440869668884, guid: 7f1fb2ac1c30f174a8c26ea197f984b8, type: 3}
+  - <Name>k__BackingField: Torch
+    <ID>k__BackingField: 42
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8944496391623536805, guid: 94d61fa051afe3f4099a824aa6a8ea36, type: 3}
+  - <Name>k__BackingField: Fruit
+    <ID>k__BackingField: 43
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 4058267861552977464, guid: 6640ace4850813749981e70d670ae9d5, type: 3}
+  - <Name>k__BackingField: Berry
+    <ID>k__BackingField: 44
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 8903486591948628409, guid: a14dc4d7c35a7df4f9f4cb05458930d2, type: 3}
