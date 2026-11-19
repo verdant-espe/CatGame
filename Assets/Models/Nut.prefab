@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7653549592775719780}
   - component: {fileID: 1872775495429812817}
   - component: {fileID: 6429456429965223062}
-  - component: {fileID: 2060801862824312152}
   - component: {fileID: 2525484620058102530}
+  - component: {fileID: 2060801862824312152}
+  - component: {fileID: 5236514973648627337}
   m_Layer: 0
   m_Name: NutItself
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4874815357321822675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.085999966, z: 0}
+  m_LocalPosition: {x: 0, y: 0.124, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,22 +118,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2060801862824312152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4874815357321822675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
 --- !u!65 &2525484620058102530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -154,6 +143,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22060719, y: 0.24955647, z: 0.03782386}
   m_Center: {x: 0.00027116266, y: 0.00057344773, z: 0.0013295211}
+--- !u!114 &2060801862824312152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874815357321822675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &5236514973648627337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874815357321822675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!1 &8754131813095461274
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +193,7 @@ Transform:
   m_GameObject: {fileID: 8754131813095461274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.769, y: 0.97566, z: -9.013818}
+  m_LocalPosition: {x: 2.769, y: 0.977, z: -9.013818}
   m_LocalScale: {x: 0.6818, y: 0.6818, z: 0.6818}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -206,5 +219,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.21660177, y: 0.25198403, z: 0.04980946}
-  m_Center: {x: 0.0021965771, y: 0.08616006, z: -0.00014495739}
+  m_Size: {x: 0.21660177, y: 0.2497189, z: 0.04980946}
+  m_Center: {x: 0.0021965771, y: 0.124505565, z: -0.00014495739}

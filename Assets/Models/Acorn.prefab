@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2746818812616791682}
   - component: {fileID: 7326874513978055178}
   - component: {fileID: 6630113646949330559}
+  - component: {fileID: 8407398227075020479}
   - component: {fileID: 9049896105541428029}
   - component: {fileID: 800793166746020782}
   m_Layer: 0
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3387088315249452524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.085999966, z: 0}
+  m_LocalPosition: {x: 0, y: 0.167, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +119,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -134,6 +135,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &8407398227075020479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387088315249452524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!65 &9049896105541428029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -153,8 +166,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.34131214, y: 0.34062773, z: 0.06064451}
-  m_Center: {x: -0.0007553963, y: 0.002964454, z: 0.002162714}
+  m_Size: {x: 0.34131214, y: 0.34359345, z: 0.06064451}
+  m_Center: {x: -0.0007553963, y: 0.002412446, z: 0.002162714}
 --- !u!114 &800793166746020782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 5924947271547272908}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.386, y: 1.002595, z: -9.013818}
+  m_LocalPosition: {x: 3.386, y: 0.167, z: -9.013818}
   m_LocalScale: {x: 0.64645, y: 0.64645, z: 0.64645}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -222,4 +235,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.33886248, y: 0.34395522, z: 0.07573334}
-  m_Center: {x: 0.000018371453, y: 0.08597247, z: 0.00080695364}
+  m_Center: {x: 0.000018371453, y: 0.167, z: 0.00080695364}

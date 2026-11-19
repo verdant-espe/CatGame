@@ -52,8 +52,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20923162, y: 0.2510774, z: 0.092731476}
-  m_Center: {x: -0.018138051, y: 0.060625434, z: 0.0020227432}
+  m_Size: {x: 0.20923162, y: 0.25173366, z: 0.092731476}
+  m_Center: {x: -0.018138051, y: 0.12453455, z: 0.0020227432}
 --- !u!1 &8929410102695414020
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,8 +65,9 @@ GameObject:
   - component: {fileID: 7303099253548345224}
   - component: {fileID: 8790821464700881497}
   - component: {fileID: 8359405404699077827}
-  - component: {fileID: 8305055832981934772}
   - component: {fileID: 5501692574019336899}
+  - component: {fileID: 8305055832981934772}
+  - component: {fileID: 527815564846950690}
   m_Layer: 0
   m_Name: BucketItself
   m_TagString: Untagged
@@ -83,7 +84,7 @@ Transform:
   m_GameObject: {fileID: 8929410102695414020}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0183, y: 0.0603, z: 0}
+  m_LocalPosition: {x: -0.0183, y: 0.1232, z: 0}
   m_LocalScale: {x: 0.8593, y: 0.8396, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -171,22 +172,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8305055832981934772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8929410102695414020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
 --- !u!65 &5501692574019336899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -208,3 +197,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.24010316, y: 0.29933625, z: 0.09304428}
   m_Center: {x: 0.00131896, y: 0.0016291089, z: 0.0024471283}
+--- !u!114 &8305055832981934772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929410102695414020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &527815564846950690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8929410102695414020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector

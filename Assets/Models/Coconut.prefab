@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1350574119166388004}
   - component: {fileID: 4676526474251048911}
   - component: {fileID: 8290203311219456062}
-  - component: {fileID: 825448626840380521}
   - component: {fileID: 108722076243708768}
+  - component: {fileID: 825448626840380521}
+  - component: {fileID: 9121594695578611848}
   - component: {fileID: 5930577007822984849}
   m_Layer: 0
   m_Name: CoconutItself
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1365913697517688026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.085999966, z: 0}
+  m_LocalPosition: {x: 0, y: 0.141, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,22 +119,10 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &825448626840380521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365913697517688026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
 --- !u!65 &108722076243708768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -155,6 +144,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.27928278, y: 0.28216687, z: 0.03215313}
   m_Center: {x: -0.00044264094, y: 0.0012593131, z: 0.0013256072}
+--- !u!114 &825448626840380521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365913697517688026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f92d2d6d473f534da6c009dbc836f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectInteractable
+--- !u!114 &9121594695578611848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365913697517688026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31447354fdbb54b40b364c7c35b5e1f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemSelector
 --- !u!114 &5930577007822984849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,5 +234,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28016117, y: 0.28148526, z: 0.049809456}
-  m_Center: {x: -0.00088810024, y: 0.08671382, z: -0.00014495777}
+  m_Size: {x: 0.28016117, y: 0.28081176, z: 0.049809456}
+  m_Center: {x: -0.00088810024, y: 0.1409391, z: -0.00014495777}
