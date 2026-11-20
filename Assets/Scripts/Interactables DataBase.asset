@@ -229,3 +229,11 @@ MonoBehaviour:
     <ID>k__BackingField: 52
     <Size>k__BackingField: {x: 1, y: 1}
     <Prefab>k__BackingField: {fileID: 57595713899977216, guid: 8153dfd0ac7584241889c314d55328f8, type: 3}
+  - <Name>k__BackingField: Water Bucket
+    <ID>k__BackingField: 53
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 3201961241099492381, guid: 1d1f518f6ca2f344d8c765900832e175, type: 3}
+  - <Name>k__BackingField: Lava Bucket
+    <ID>k__BackingField: 54
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 7524151661685054720, guid: 864884d4e2a0fd8438aa61898caa5352, type: 3}

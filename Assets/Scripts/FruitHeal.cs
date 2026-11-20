@@ -3,14 +3,19 @@ using UnityEngine;
 public class FruitHeal : MonoBehaviour
 {
     // References player's health in BadCatHealth
-    public BadCatHealth playerHealth;
+    private BadCatHealth playerHealth;
 
     // Sets healing limit for fruit
     public int healthRegen = 1;
 
-    private void OnCollisionEnter(Collision collision)
+    private void Start()
     {
-        if (collision.gameObject.tag == "Player")
+        playerHealth = GameObject.Find("BadCat").GetComponent<BadCatHealth>();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
         {
             // Fruit heals player by 1 heart
             playerHealth.HealthRegen(healthRegen);
